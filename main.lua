@@ -36804,7 +36804,7 @@ portaldotstimer = 0
 
 pswitchtime = 20 end end)()end;
 do require("package").preload["game"] = (function() local package;return function(...)-- <pack game> --
-﻿networkupdatetimer = 0
+networkupdatetimer = 0
 enemyupdatetimer = 0
 angletimer = 0
 
