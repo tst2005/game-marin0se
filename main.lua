@@ -1,4 +1,4 @@
-do require("package").preload["musicloader"] = function(...)-- <pack musicloader> --
+require("package").preload["musicloader"] = function(...)-- <pack musicloader> --
 music = {
 	loaded = {},
 	pitch = 1,
@@ -97,7 +97,7 @@ function music:update()
 	end
 end
 end;
-do require("package").preload["miniblock"] = function(...)-- <pack miniblock> --
+require("package").preload["miniblock"] = function(...)-- <pack miniblock> --
 miniblock = class("miniblock")
 
 function miniblock:init(x, y, i)
@@ -156,7 +156,7 @@ function miniblock:draw()
 	love.graphics.draw(img, tilequads[self.i]:quad(), math.floor((self.x-xscroll)*16*scale), math.floor((self.y-yscroll-.5-yadd)*16*scale), 0, scale/2, scale/2, 8, 16)
 end
 end;
-do require("package").preload["libs.tserial"] = function(...)-- <pack libs.tserial> --
+require("package").preload["libs.tserial"] = function(...)-- <pack libs.tserial> --
 --- Tserial v1.51d, a simple table serializer which turns tables into Lua script
 -- @author Taehl (SelfMadeSpirit@gmail.com)
 Tserial = {}
@@ -221,7 +221,7 @@ function Tserial.unpack(s, safe)
 	return t, result
 end
 end;
-do require("package").preload["libs.TLbind"] = function(...)-- <pack libs.TLbind> --
+require("package").preload["libs.TLbind"] = function(...)-- <pack libs.TLbind> --
 --- TLbind v1.3, a simple system for creating professional control schemes
 -- @author Taehl (SelfMadeSpirit@gmail.com), with contributions from smrq
 
@@ -515,7 +515,7 @@ end
 TLbind = giveInstance({giveInstance=giveInstance})
 return TLbind, TLbind.control, TLbind.control.tap, TLbind.control.release
 end;
-do require("package").preload["libs.von"] = function(...)-- <pack libs.von> --
+require("package").preload["libs.von"] = function(...)-- <pack libs.von> --
 --[[	vON 1.1.1
 
 	Copyright 2012-2013 Alexandru-Mihai Maftei
@@ -937,7 +937,7 @@ von = {}
 von.deserialize = setmetatable(_deserialize,_d_meta)
 von.serialize = setmetatable(_serialize,_s_meta)
 end;
-do require("package").preload["libs.https"] = function(...)-- <pack libs.https> --
+require("package").preload["libs.https"] = function(...)-- <pack libs.https> --
 ----------------------------------------------------------------------------
 -- LuaSec 0.4.1
 -- Copyright (C) 2009-2011 PUC-Rio
@@ -1077,7 +1077,7 @@ function request(url, body)
   return res, code, headers, status
 end
 end;
-do require("package").preload["libs.ssl"] = function(...)-- <pack libs.ssl> --
+require("package").preload["libs.ssl"] = function(...)-- <pack libs.ssl> --
 ------------------------------------------------------------------------------
 -- LuaSec 0.4.1
 -- Copyright (C) 2006-2011 Bruno Silvestre
@@ -1247,7 +1247,7 @@ end
 core.setmethod("info", info)
 
 end;
-do require("package").preload["libs.lurker"] = function(...)-- <pack libs.lurker> --
+require("package").preload["libs.lurker"] = function(...)-- <pack libs.lurker> --
 --
 -- lurker 
 --
@@ -1494,7 +1494,7 @@ end
 
 return lurker.init()
 end;
-do require("package").preload["libs.filter"] = function(...)-- <pack libs.filter> --
+require("package").preload["libs.filter"] = function(...)-- <pack libs.filter> --
 --[[
 	EntranceJew made this.
 	
@@ -1547,7 +1547,7 @@ function filter.multiAny(ftype, ...)
 	return false
 end
 end;
-do require("package").preload["libs.JSON"] = function(...)-- <pack libs.JSON> --
+require("package").preload["libs.JSON"] = function(...)-- <pack libs.JSON> --
 -- -*- coding: utf-8 -*-
 --
 -- Copyright 2010-2012 Jeffrey Friedl
@@ -2404,7 +2404,7 @@ return OBJDEF:new()
 --   20100731.1    initial public release
 --
 end;
-do require("package").preload["libs.middleclass"] = function(...)-- <pack libs.middleclass> --
+require("package").preload["libs.middleclass"] = function(...)-- <pack libs.middleclass> --
 local middleclass = {
   _VERSION     = 'middleclass v3.0.0',
   _DESCRIPTION = 'Object Orientation for Lua',
@@ -2594,7 +2594,7 @@ setmetatable(middleclass, { __call = function(_, ...) return middleclass.class(.
 
 return middleclass
 end;
-do require("package").preload["libs.cupid"] = function(...)-- <pack libs.cupid> --
+require("package").preload["libs.cupid"] = function(...)-- <pack libs.cupid> --
 -----------------------------------------------------
 -- (C) Robert Blancakert 2012
 -- Available under the same license as Love
@@ -3538,7 +3538,7 @@ AFQAcgBhAGQAZQBtAGEAcgBrACAAbwBmACAATQBhAHQAdABoAGUAdwAgAFcAZQBsAGMAaAAAAAAA
 AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 ]], "whiterabit.ttf", "base64") end
 end;
-do require("package").preload["libs.sha1"] = function(...)-- <pack libs.sha1> --
+require("package").preload["libs.sha1"] = function(...)-- <pack libs.sha1> --
 --
 -- SHA-1 secure hash computation, and HMAC-SHA1 signature computation,
 -- in pure Lua (tested on Lua 5.1)
@@ -4569,7 +4569,7 @@ print(199) assert("950ad3222f4917f868d09feab237a909fb6d50b7" == hmac_sha1(string
 ---]]-----------------------------------------------------------------------------------------
 --END
 end;
-do require("package").preload["libs.neubind"] = function(...)-- <pack libs.neubind> --
+require("package").preload["libs.neubind"] = function(...)-- <pack libs.neubind> --
 --[[
 	Here's the foundation for a bind system that works with LOVE 0.9.1 
 	It requires the following features:
@@ -4776,7 +4776,7 @@ function neubind:promptCallback(controlname, controlid)
 	--@controlid == the id of the control
 end
 end;
-do require("package").preload["libs.lube.tcp"] = function(...)-- <pack libs.lube.tcp> --
+require("package").preload["libs.lube.tcp"] = function(...)-- <pack libs.lube.tcp> --
 local socket = require "socket"
 
 --- CLIENT ---
@@ -4894,7 +4894,7 @@ end
 
 return {tcpClient, tcpServer}
 end;
-do require("package").preload["libs.lube.udp"] = function(...)-- <pack libs.lube.udp> --
+require("package").preload["libs.lube.udp"] = function(...)-- <pack libs.lube.udp> --
 local socket = require "socket"
 
 --- CLIENT ---
@@ -4978,7 +4978,7 @@ end
 
 return {udpClient, udpServer}
 end;
-do require("package").preload["libs.lube.core"] = function(...)-- <pack libs.lube.core> --
+require("package").preload["libs.lube.core"] = function(...)-- <pack libs.lube.core> --
 --- CLIENT ---
 
 local client = {}
@@ -5208,7 +5208,7 @@ end
 
 return {client, server}
 end;
-do require("package").preload["libs.lube.init"] = function(...)-- <pack libs.lube.init> --
+require("package").preload["libs.lube.init"] = function(...)-- <pack libs.lube.init> --
 -- Get our base modulename, to require the submodules
 local modulename = ...
 modulename = modulename:match("^(.+)%.init$") or modulename
@@ -5266,7 +5266,7 @@ end
 
 return lube
 end;
-do require("package").preload["libs.lube.enet"] = function(...)-- <pack libs.lube.enet> --
+require("package").preload["libs.lube.enet"] = function(...)-- <pack libs.lube.enet> --
 local enet = require "enet"
 
 --- CLIENT ---
@@ -5406,7 +5406,7 @@ end
 
 return {enetClient, enetServer}
 end;
-do require("package").preload["libs.TEsound"] = function(...)-- <pack libs.TEsound> --
+require("package").preload["libs.TEsound"] = function(...)-- <pack libs.TEsound> --
 --- TEsound v1.3, a simplified sound system for Love 2D
 -- @author Ensayia (Ensayia@gmail.com) & Taehl (SelfMadeSpirit@gmail.com)
 TEsound = {}				-- Namespace
@@ -5586,7 +5586,7 @@ function TEsound.findAllTagsRecurse(tags,sounds)
 	if #tags==0 then return sounds else	return TEsound.findAllTagsRecurse0(tags, sounds) end
 end
 end;
-do require("package").preload["libs.lume"] = function(...)-- <pack libs.lume> --
+require("package").preload["libs.lume"] = function(...)-- <pack libs.lume> --
 --
 -- lume
 --
@@ -6049,7 +6049,7 @@ end
 
 return lume
 end;
-do require("package").preload["libs.monocle"] = function(...)-- <pack libs.monocle> --
+require("package").preload["libs.monocle"] = function(...)-- <pack libs.monocle> --
 Monocle = {}
 function Monocle.new(initial)
 	Monocle.active = initial.isActive or false
@@ -6277,7 +6277,7 @@ end]]
 return Monocle
 
 end;
-do require("package").preload["server"] = function(...)-- <pack server> --
+require("package").preload["server"] = function(...)-- <pack server> --
 --[[ NORMALIZATION:
 	clientid == the id of the client according to lube
 	playerid == the id of a player in the server_peerlist
@@ -6631,7 +6631,7 @@ function server_callback_controlupdate(pl)
 	server_send("synccontrol", pl, sendto)
 end
 end;
-do require("package").preload["intro"] = function(...)-- <pack intro> --
+require("package").preload["intro"] = function(...)-- <pack intro> --
 function intro_load()
 	gamestate = "intro"
 	
@@ -6714,7 +6714,7 @@ function intro_skip()
 	shaders:set(2, shaderlist[currentshaderi2])
 end
 end;
-do require("package").preload["regiondrag"] = function(...)-- <pack regiondrag> --
+require("package").preload["regiondrag"] = function(...)-- <pack regiondrag> --
 regiondrag = class("regiondrag")
 
 regiondragboxwidth = 3
@@ -6896,7 +6896,7 @@ function regiondrag:inhighlight(x, y, i)
 	return x >= vx-regiondragboxwidth*scale and x < vx+regiondragboxwidth*scale and y >= vy-regiondragboxwidth*scale and y < vy+regiondragboxwidth*scale
 end
 end;
-do require("package").preload["anim"] = function(...)-- <pack anim> --
+require("package").preload["anim"] = function(...)-- <pack anim> --
 anim = class("anim")
 --[[
 	anim (for lack of the availability of "animation") is for player animations
@@ -6923,7 +6923,7 @@ end
 
 
 end;
-do require("package").preload["fire"] = function(...)-- <pack fire> --
+require("package").preload["fire"] = function(...)-- <pack fire> --
 fire = class("fire")
 
 function fire:init(x, y)
@@ -7020,7 +7020,7 @@ function fire:ceilcollide(a, b)
 	return false
 end
 end;
-do require("package").preload["itemanimation"] = function(...)-- <pack itemanimation> --
+require("package").preload["itemanimation"] = function(...)-- <pack itemanimation> --
 itemanimation = class("itemanimation")
 
 function itemanimation:init(x, y, i)
@@ -7047,7 +7047,7 @@ function itemanimation:draw()
 	love.graphics.setScissor()
 end
 end;
-do require("package").preload["notice"] = function(...)-- <pack notice> --
+require("package").preload["notice"] = function(...)-- <pack notice> --
 notice = {}
 notice.red = {255, 127, 127}
 notice.white = {255, 255, 255}
@@ -7124,7 +7124,7 @@ function notice.gety(y, life, height, duration)
 	end
 end
 end;
-do require("package").preload["screenboundary"] = function(...)-- <pack screenboundary> --
+require("package").preload["screenboundary"] = function(...)-- <pack screenboundary> --
 screenboundary = class("screenboundary")
 
 function screenboundary:init(x)
@@ -7138,7 +7138,7 @@ function screenboundary:init(x)
 	self.mask = {true}
 end 
 end;
-do require("package").preload["imgurupload"] = function(...)-- <pack imgurupload> --
+require("package").preload["imgurupload"] = function(...)-- <pack imgurupload> --
 -- WHOO BOY THANK THE LORDY FOR SSL FROM http://love2d.org/forums/viewtopic.php?f=5&t=76728
 require("libs.ssl")
 require("libs.https")
@@ -7167,7 +7167,7 @@ function upload_imagedata(oname, imagedata)
 	return JSON:decode(table.concat(t))
 end
 end;
-do require("package").preload["animationsystem"] = function(...)-- <pack animationsystem> --
+require("package").preload["animationsystem"] = function(...)-- <pack animationsystem> --
 function animationsystem_load()
 	animationtriggerfuncs = {}
 	animations = {}
@@ -7197,7 +7197,7 @@ function animationsystem_draw()
 	end
 end
 end;
-do require("package").preload["customhats"] = function(...)-- <pack customhats> --
+require("package").preload["customhats"] = function(...)-- <pack customhats> --
 --Not the hatloader mod.
 
 function loadhat(path)
@@ -7230,7 +7230,7 @@ for i, v in pairs(files) do
 	end
 end
 end;
-do require("package").preload["levelscreen"] = function(...)-- <pack levelscreen> --
+require("package").preload["levelscreen"] = function(...)-- <pack levelscreen> --
 function levelscreen_load(reason, i)
 	--check if lives left
   help_tipi = math.random(1,#help_tips)
@@ -7422,7 +7422,7 @@ function levelscreen_draw()
 	end
 end
 end;
-do require("package").preload["bighatconfigs"] = function(...)-- <pack bighatconfigs> --
+require("package").preload["bighatconfigs"] = function(...)-- <pack bighatconfigs> --
 bighat = {}
 
 table.insert(bighat, {x = 0, y = 0, height = 4, graphic = love.graphics.newImage("standardbighats/standard.png")})
@@ -7509,7 +7509,7 @@ table.insert(bighat, {x = -3, y = -1, height = 14, graphic = love.graphics.newIm
 
 table.insert(bighat, {x = -7, y = -12, height = 14, graphic = love.graphics.newImage("standardbighats/bighead.png")})
 end;
-do require("package").preload["editor"] = function(...)-- <pack editor> --
+require("package").preload["editor"] = function(...)-- <pack editor> --
 -- unused for now
 editor_undohistory = {}
 --indexed by operation stack, largest number is most recent
@@ -9556,7 +9556,7 @@ function drawlinkline(x1, y1, x2, y2)
 	love.graphics.rectangle("fill", x2-math.ceil(scale/2), y1, scale, y2-y1)
 end
 end;
-do require("package").preload["animatedquad"] = function(...)-- <pack animatedquad> --
+require("package").preload["animatedquad"] = function(...)-- <pack animatedquad> --
 animatedquad = class("animatedquad")
 
 function animatedquad:init(imgpath, s, number)
@@ -9661,7 +9661,7 @@ function animatedquad:getproperty(s, x, y)
 	end
 end
 end;
-do require("package").preload["world"] = function(...)-- <pack world> --
+require("package").preload["world"] = function(...)-- <pack world> --
 world = class("world")
 --[[
 	world is meant to contain the global gamestate info that does not belong to players
@@ -9752,7 +9752,7 @@ function world:anyPlayersActiveAndAlive()
 	)
 end
 end;
-do require("package").preload["physics"] = function(...)-- <pack physics> --
+require("package").preload["physics"] = function(...)-- <pack physics> --
 --[[
 	PHYSICS LIBRARY THING
 	WRITTEN BY Maurice Guégan FOR MARI0
@@ -11165,7 +11165,7 @@ function unrotate(rotation, gravitydirection, dt)
 	return rotation
 end
 end;
-do require("package").preload["quad"] = function(...)-- <pack quad> --
+require("package").preload["quad"] = function(...)-- <pack quad> --
 quad = class("quad")
 
 --COLLIDE?
@@ -11316,7 +11316,7 @@ function getquadprops(imgdata, x, y)
 	return self
 end
 end;
-do require("package").preload["backwards_compat"] = function(...)-- <pack backwards_compat> --
+require("package").preload["backwards_compat"] = function(...)-- <pack backwards_compat> --
 --[[@NOTE: This is a lua file so that I can take advantage of [ZeroBrane's markdown](http://studio.zerobrane.com/doc-markdown-formatting.html).
 	This document illustrates the significant changes between Mari0 SE and Marin0 SE.
 	This will only point out changes crucial to getting old Mari0 mappacks working
@@ -11328,7 +11328,7 @@ do require("package").preload["backwards_compat"] = function(...)-- <pack backwa
 	some names got changed
 ]]
 end;
-do require("package").preload["magic"] = function(...)-- <pack magic> --
+require("package").preload["magic"] = function(...)-- <pack magic> --
 magic = class("magic")
 
 function magic:init()
@@ -11351,7 +11351,7 @@ function magic:draw()
 	love.graphics.draw(magicimg, magicquad[math.floor(self.t/self.lifetime*6)+1], self.x, self.y, 0, scale, scale, 5, 5)
 end
 end;
-do require("package").preload["main"] = function(...)-- <pack main> --
+require("package").preload["main"] = function(...)-- <pack main> --
 require("hook")
 require("libs.tserial")
 require("utils")
@@ -13732,7 +13732,7 @@ function net_quit()
 	end
 end
 end;
-do require("package").preload["basedmixins.CanEmancipate"] = function(...)-- <pack basedmixins.CanEmancipate> --
+require("package").preload["basedmixins.CanEmancipate"] = function(...)-- <pack basedmixins.CanEmancipate> --
 CanEmancipate = {
 	emancipatecheck = true,
 	-- this will be used to prevent further updates once emancipated
@@ -13756,7 +13756,7 @@ function CanEmancipate:emancipate()
 	end
 end
 end;
-do require("package").preload["basedmixins.CanCollect"] = function(...)-- <pack basedmixins.CanCollect> --
+require("package").preload["basedmixins.CanCollect"] = function(...)-- <pack basedmixins.CanCollect> --
 CanCollect = {}
 
 function CanCollect:collect(ply)
@@ -13765,7 +13765,7 @@ function CanCollect:collect(ply)
 	-- additionally it prevents having to employ custom handlers
 end
 end;
-do require("package").preload["basedmixins.CanFunnel"] = function(...)-- <pack basedmixins.CanFunnel> --
+require("package").preload["basedmixins.CanFunnel"] = function(...)-- <pack basedmixins.CanFunnel> --
 CanFunnel = {
 	-- can the object be funneled?
 	can_funnel = false,
@@ -13785,7 +13785,7 @@ function CanFunnel:funnelcallback(entering)
 	end
 end
 end;
-do require("package").preload["basedmixins.CanFaithplate"] = function(...)-- <pack basedmixins.CanFaithplate> --
+require("package").preload["basedmixins.CanFaithplate"] = function(...)-- <pack basedmixins.CanFaithplate> --
 CanFaithplate = {
 	can_faithplate = true,
 	falling = true,
@@ -13799,7 +13799,7 @@ function CanFaithplate:startFall() -- this is presumably used by a faithplate as
 	self.falling = true
 end
 end;
-do require("package").preload["basedmixins.HasSounds"] = function(...)-- <pack basedmixins.HasSounds> --
+require("package").preload["basedmixins.HasSounds"] = function(...)-- <pack basedmixins.HasSounds> --
 HasSounds = {
 	activesounds = {},
 	filters = {},
@@ -13891,7 +13891,7 @@ function HasSounds:included(klass)
 	end
 end
 end;
-do require("package").preload["basedmixins.HasOutputs"] = function(...)-- <pack basedmixins.HasOutputs> --
+require("package").preload["basedmixins.HasOutputs"] = function(...)-- <pack basedmixins.HasOutputs> --
 HasOutputs = {
 	outputTable = {},
 	hasOutput = true,
@@ -13934,7 +13934,7 @@ function HasOutputs:included(klass)
 	end
 end
 end;
-do require("package").preload["basedmixins.IsMappable"] = function(...)-- <pack basedmixins.IsMappable> --
+require("package").preload["basedmixins.IsMappable"] = function(...)-- <pack basedmixins.IsMappable> --
 IsMappable = {}
 --[[
 	REQUIRES ATTRIBUTES:
@@ -14006,7 +14006,7 @@ function IsMappable:included(klass)
 end
 
 end;
-do require("package").preload["basedmixins.Base"] = function(...)-- <pack basedmixins.Base> --
+require("package").preload["basedmixins.Base"] = function(...)-- <pack basedmixins.Base> --
 -- this is a convenience collection while I clean house of baseentity
 --[[
 	this is a stub for static entities that control their own movement
@@ -14044,7 +14044,7 @@ function Base:setPosition(nx, ny, nz)
 	self.z = nz or 0
 end
 end;
-do require("package").preload["basedmixins.HasInputs"] = function(...)-- <pack basedmixins.HasInputs> --
+require("package").preload["basedmixins.HasInputs"] = function(...)-- <pack basedmixins.HasInputs> --
 -- OtherClass:include(HasInputs) gives it all elements of that table
 HasInputs = {
 	inputTable = {},
@@ -14091,7 +14091,7 @@ function HasInputs:input(signaltype, inputindex)
 	end
 end
 end;
-do require("package").preload["basedmixins.CanPortal"] = function(...)-- <pack basedmixins.CanPortal> --
+require("package").preload["basedmixins.CanPortal"] = function(...)-- <pack basedmixins.CanPortal> --
 CanPortal = {
 	-- whether or not we override the default portal method with a local one
 	portaloverride = true,
@@ -14104,7 +14104,7 @@ function CanPortal:portaled()
 	self.portaledframe = true
 end
 end;
-do require("package").preload["basedmixins.CanDamage"] = function(...)-- <pack basedmixins.CanDamage> --
+require("package").preload["basedmixins.CanDamage"] = function(...)-- <pack basedmixins.CanDamage> --
 CanDamage = {
 	-- what kind of damage this does
 	doesdamagetype = "toilet",
@@ -14114,7 +14114,7 @@ function CanDamage:doDamage(target, ...)
 	target:do_damage(self.doesdamagetype, self.lastinfluence, ...)
 end
 end;
-do require("package").preload["basedmixins.HasPhysics"] = function(...)-- <pack basedmixins.HasPhysics> --
+require("package").preload["basedmixins.HasPhysics"] = function(...)-- <pack basedmixins.HasPhysics> --
 HasPhysics = {
 	-- keep in mind that x/y are linked to draw positions 
 	x = 0, roll  = 0, width  = 0, speedx = 0, centerx = 0,
@@ -14231,7 +14231,7 @@ end
 	end
 end]]
 end;
-do require("package").preload["basedmixins.CanCarry"] = function(...)-- <pack basedmixins.CanCarry> --
+require("package").preload["basedmixins.CanCarry"] = function(...)-- <pack basedmixins.CanCarry> --
 -- this provides the info so the object can be carried and held in the player's hands like a box
 
 CanCarry = {
@@ -14258,7 +14258,7 @@ function CanCarry:drop()
 	end
 end
 end;
-do require("package").preload["basedmixins.CanInfluence"] = function(...)-- <pack basedmixins.CanInfluence> --
+require("package").preload["basedmixins.CanInfluence"] = function(...)-- <pack basedmixins.CanInfluence> --
 --[[
 	this is primarily for tracking who touched something last for kill attribution
 ]]
@@ -14281,7 +14281,7 @@ function CanInfluence:setInfluence(inf)
 	end
 end
 end;
-do require("package").preload["basedmixins.HasGraphics"] = function(...)-- <pack basedmixins.HasGraphics> --
+require("package").preload["basedmixins.HasGraphics"] = function(...)-- <pack basedmixins.HasGraphics> --
 --[[
 	this doesn't supply a prefab draw method because we use it's presence 
 	
@@ -14407,7 +14407,7 @@ function HasGraphics:included(klass)
 	end
 end
 end;
-do require("package").preload["rightclickmenu"] = function(...)-- <pack rightclickmenu> --
+require("package").preload["rightclickmenu"] = function(...)-- <pack rightclickmenu> --
 rightclickmenu = class("rightclickmenu")
 
 rightclickwidth = 110
@@ -14672,7 +14672,7 @@ function rightclickmenu:directioncallback(self, y, x)
 	self.variables[y].value = x
 end
 end;
-do require("package").preload["basedents.scrollingtext"] = function(...)-- <pack basedents.scrollingtext> --
+require("package").preload["basedents.scrollingtext"] = function(...)-- <pack basedents.scrollingtext> --
 local classname=debug.getinfo(1,'S').source:split("/")[2]:sub(0,-5)
 _G[classname] = class(classname, baseentity)
 local thisclass = _G[classname]
@@ -14754,7 +14754,7 @@ function thisclass:draw()
 	end
 end
 end;
-do require("package").preload["basedents.blockdebris"] = function(...)-- <pack basedents.blockdebris> --
+require("package").preload["basedents.blockdebris"] = function(...)-- <pack basedents.blockdebris> --
 local classname=debug.getinfo(1,'S').source:split("/")[2]:sub(0,-5)
 _G[classname] = class(classname, baseentity)
 local thisclass = _G[classname]
@@ -14812,7 +14812,7 @@ function thisclass:update(dt)
 	return self.destroy
 end
 end;
-do require("package").preload["basedents.fireball"] = function(...)-- <pack basedents.fireball> --
+require("package").preload["basedents.fireball"] = function(...)-- <pack basedents.fireball> --
 local classname=debug.getinfo(1,'S').source:split("/")[2]:sub(0,-5)
 _G[classname] = class(classname, baseentity)
 local thisclass = _G[classname]
@@ -14967,7 +14967,7 @@ function thisclass:explode()
 	end
 end
 end;
-do require("package").preload["basedents.bigbox"] = function(...)-- <pack basedents.bigbox> --
+require("package").preload["basedents.bigbox"] = function(...)-- <pack basedents.bigbox> --
 local classname=debug.getinfo(1,'S').source:split("/")[2]:sub(0,-5)
 _G[classname] = class(classname, baseentity)
 local thisclass = _G[classname]
@@ -15182,7 +15182,7 @@ function thisclass:onbutton(s)
 	end
 end
 end;
-do require("package").preload["basedents.rainboom"] = function(...)-- <pack basedents.rainboom> --
+require("package").preload["basedents.rainboom"] = function(...)-- <pack basedents.rainboom> --
 local classname=debug.getinfo(1,'S').source:split("/")[2]:sub(0,-5)
 _G[classname] = class(classname, baseentity)
 local thisclass = _G[classname]
@@ -15264,7 +15264,7 @@ function thisclass:draw()
 	love.graphics.draw(self.graphic, self.quad, (self.x-xscroll)*16*scale, (self.y-yscroll-0.5)*16*scale, self.roll, scale, scale, 29, 92)
 end
 end;
-do require("package").preload["basedents.box"] = function(...)-- <pack basedents.box> --
+require("package").preload["basedents.box"] = function(...)-- <pack basedents.box> --
 local classname=debug.getinfo(1,'S').source:split("/")[2]:sub(0,-5)
 _G[classname] = class(classname, baseentity)
 local thisclass = _G[classname]
@@ -15478,7 +15478,7 @@ function thisclass:onbutton(s)
 	end
 end
 end;
-do require("package").preload["basedents.emancipationfizzle"] = function(...)-- <pack basedents.emancipationfizzle> --
+require("package").preload["basedents.emancipationfizzle"] = function(...)-- <pack basedents.emancipationfizzle> --
 local classname=debug.getinfo(1,'S').source:split("/")[2]:sub(0,-5)
 _G[classname] = class(classname, baseentity)
 local thisclass = _G[classname]
@@ -15534,7 +15534,7 @@ function thisclass:draw()
 	)
 end
 end;
-do require("package").preload["basedents.bubble"] = function(...)-- <pack basedents.bubble> --
+require("package").preload["basedents.bubble"] = function(...)-- <pack basedents.bubble> --
 local classname=debug.getinfo(1,'S').source:split("/")[2]:sub(0,-5)
 _G[classname] = class(classname, baseentity)
 local thisclass = _G[classname]
@@ -15596,7 +15596,7 @@ function bubble:draw()
 	love.graphics.draw(self.graphic, self.quad, math.floor((self.x-xscroll)*16*scale), math.floor((self.y-yscroll-.5)*16*scale), 0, scale, scale, 2, 2)
 end
 end;
-do require("package").preload["timer"] = function(...)-- <pack timer> --
+require("package").preload["timer"] = function(...)-- <pack timer> --
 --[[
 	Modeled after garry's mod's timer implementation.
 	
@@ -15738,7 +15738,7 @@ function timer.UnPause(identifier)
 	end
 end
 end;
-do require("package").preload["loveutils"] = function(...)-- <pack loveutils> --
+require("package").preload["loveutils"] = function(...)-- <pack loveutils> --
 -- credits to [Robin](http://love2d.org/forums/viewtopic.php?p=69006&sid=d263c1c1d69a5ffe6fd6259bb7d4ae9c#p69006)
 function love.graphics.roundrect(mode, x, y, width, height, xround, yround)
 	local points = {}
@@ -15873,7 +15873,7 @@ love.image.newImageData = function(img, ex)
 	return love.image.oldImageData(img, ex)
 end
 end;
-do require("package").preload["dialogbox"] = function(...)-- <pack dialogbox> --
+require("package").preload["dialogbox"] = function(...)-- <pack dialogbox> --
 dialogbox = class("dialogbox")
 
 function dialogbox:init(text, speaker)
@@ -15963,7 +15963,7 @@ function dialogbox:draw()
 	end
 end
 end;
-do require("package").preload["camera"] = function(...)-- <pack camera> --
+require("package").preload["camera"] = function(...)-- <pack camera> --
 --[[
 Copyright (c) 2010-2013 Matthias Richter
 
@@ -16080,7 +16080,7 @@ function camera:mousepos()
 	return self:worldCoords(love.mouse.getPosition())
 end
 end;
-do require("package").preload["mappacks.tiled_example.1-1"] = function(...)-- <pack mappacks.tiled_example.1-1> --
+require("package").preload["mappacks.tiled_example.1-1"] = function(...)-- <pack mappacks.tiled_example.1-1> --
 return {
   version = "1.1",
   luaversion = "5.1",
@@ -16582,7 +16582,7 @@ return {
   }
 }
 end;
-do require("package").preload["menu"] = function(...)-- <pack menu> --
+require("package").preload["menu"] = function(...)-- <pack menu> --
 function menu_load()
 	loadconfig()
 	love.audio.stop()
@@ -18751,7 +18751,7 @@ function changecharacter(i)
 	colorsetedit = 1
 end
 end;
-do require("package").preload["lobby"] = function(...)-- <pack lobby> --
+require("package").preload["lobby"] = function(...)-- <pack lobby> --
 function lobby_load(hostnick)
 	objects = nil
 	if guielements.hideip then
@@ -19325,7 +19325,7 @@ function toggleclassicmode()
 end
 
 end;
-do require("package").preload["entity"] = function(...)-- <pack entity> --
+require("package").preload["entity"] = function(...)-- <pack entity> --
 entity = class("entity")
 
 entitylist = {	
@@ -19967,7 +19967,7 @@ end
 
 entityquad_overloads = {} --this is for overloading whatever is done to entityquads because we can't use it normally
 end;
-do require("package").preload["entities.faithplate"] = function(...)-- <pack entities.faithplate> --
+require("package").preload["entities.faithplate"] = function(...)-- <pack entities.faithplate> --
 faithplate = class("faithplate")
 
 function faithplate:init(x, y, r)
@@ -20148,7 +20148,7 @@ function faithplate:draw()
 	love.graphics.setScissor()
 end
 end;
-do require("package").preload["entities.vine"] = function(...)-- <pack entities.vine> --
+require("package").preload["entities.vine"] = function(...)-- <pack entities.vine> --
 vine = class("vine")
 
 function vine:init(x, y, t)
@@ -20226,7 +20226,7 @@ function vine:draw()
 	end
 end
 end;
-do require("package").preload["entities.portalprojectile"] = function(...)-- <pack entities.portalprojectile> --
+require("package").preload["entities.portalprojectile"] = function(...)-- <pack entities.portalprojectile> --
 portalprojectile = class("portalprojectile")
 
 function portalprojectile:init(x, y, tx, ty, color, hit, payload, mirror, mirrored)
@@ -20378,7 +20378,7 @@ function portalprojectile:createportal()
 	self.destroy = true
 end
 end;
-do require("package").preload["entities.castlefire"] = function(...)-- <pack entities.castlefire> --
+require("package").preload["entities.castlefire"] = function(...)-- <pack entities.castlefire> --
 castlefire = class("castlefire")
 
 function castlefire:init(x, y, r)
@@ -20473,7 +20473,7 @@ function castlefire:updatequad()
 	end
 end
 end;
-do require("package").preload["entities.laserdetector"] = function(...)-- <pack entities.laserdetector> --
+require("package").preload["entities.laserdetector"] = function(...)-- <pack entities.laserdetector> --
 laserdetector = class("laserdetector")
 
 function laserdetector:init(x, y, r)
@@ -20541,7 +20541,7 @@ function laserdetector:clear()
 	end
 end
 end;
-do require("package").preload["entities.door"] = function(...)-- <pack entities.door> --
+require("package").preload["entities.door"] = function(...)-- <pack entities.door> --
 door = class("door")
 
 function door:init(x, y, r)
@@ -20720,7 +20720,7 @@ function door:closeopen(open)
 	end
 end
 end;
-do require("package").preload["entities.generatorcheeps"] = function(...)-- <pack entities.generatorcheeps> --
+require("package").preload["entities.generatorcheeps"] = function(...)-- <pack entities.generatorcheeps> --
 generatorcheeps = class("generatorcheeps")
 
 function generatorcheeps:init(x, y, r)
@@ -20801,7 +20801,7 @@ function generatorcheeps:draw()
 	
 end
 end;
-do require("package").preload["entities.generatorbullet"] = function(...)-- <pack entities.generatorbullet> --
+require("package").preload["entities.generatorbullet"] = function(...)-- <pack entities.generatorbullet> --
 generatorbullet = class("generatorbullet")
 
 function generatorbullet:init(x, y, r)
@@ -20905,7 +20905,7 @@ function generatorbullet:draw()
 	
 end
 end;
-do require("package").preload["entities.gel"] = function(...)-- <pack entities.gel> --
+require("package").preload["entities.gel"] = function(...)-- <pack entities.gel> --
 gel = class("gel")
 
 function gel:init(x, y, id)
@@ -21115,7 +21115,7 @@ function gel:enteredfunnel(inside)
 	end
 end
 end;
-do require("package").preload["entities.tile"] = function(...)-- <pack entities.tile> --
+require("package").preload["entities.tile"] = function(...)-- <pack entities.tile> --
 tile = class("tile")
 
 function tile:init(x, y, slant)
@@ -21133,7 +21133,7 @@ function tile:init(x, y, slant)
 	self.mask = {true}
 end
 end;
-do require("package").preload["entities.enemyspawner"] = function(...)-- <pack entities.enemyspawner> --
+require("package").preload["entities.enemyspawner"] = function(...)-- <pack entities.enemyspawner> --
 enemyspawner = class("enemyspawner")
 
 function enemyspawner:init(x, y, r)
@@ -21202,7 +21202,7 @@ function enemyspawner:input(t, input)
 	end
 end
 end;
-do require("package").preload["entities.portalent"] = function(...)-- <pack entities.portalent> --
+require("package").preload["entities.portalent"] = function(...)-- <pack entities.portalent> --
 portalent = class("portalent")
 
 function portalent:init(x, y, r)
@@ -21312,7 +21312,7 @@ function portalent:rem()
 	end
 end
 end;
-do require("package").preload["entities.regiontrigger"] = function(...)-- <pack entities.regiontrigger> --
+require("package").preload["entities.regiontrigger"] = function(...)-- <pack entities.regiontrigger> --
 regiontrigger = class("regiontrigger")
 
 function regiontrigger:init(x, y, r)
@@ -21394,7 +21394,7 @@ function regiontrigger:addoutput(a, t)
 	table.insert(self.outtable, {a, t})
 end
 end;
-do require("package").preload["entities.scaffold"] = function(...)-- <pack entities.scaffold> --
+require("package").preload["entities.scaffold"] = function(...)-- <pack entities.scaffold> --
 scaffold = class("scaffold")
 
 function scaffold:init(x, y, r)
@@ -21658,7 +21658,7 @@ function scaffold:passivecollide(a, b)
 	return false
 end
 end;
-do require("package").preload["entities.old_box"] = function(...)-- <pack entities.old_box> --
+require("package").preload["entities.old_box"] = function(...)-- <pack entities.old_box> --
 box = class("box")
 
 function box:init(x, y)
@@ -21940,7 +21940,7 @@ function box:onbutton(s)
 	end
 end
 end;
-do require("package").preload["entities.andgate"] = function(...)-- <pack entities.andgate> --
+require("package").preload["entities.andgate"] = function(...)-- <pack entities.andgate> --
 andgate = class("andgate")
 
 function andgate:init(x, y, r)
@@ -22032,7 +22032,7 @@ function andgate:input(t, input)
 	end
 end
 end;
-do require("package").preload["entities.platformspawner"] = function(...)-- <pack entities.platformspawner> --
+require("package").preload["entities.platformspawner"] = function(...)-- <pack entities.platformspawner> --
 platformspawner = class("platformspawner")
 
 function platformspawner:init(x, y, r)
@@ -22090,7 +22090,7 @@ function platformspawner:update(dt)
 	end
 end
 end;
-do require("package").preload["entities.laser"] = function(...)-- <pack entities.laser> --
+require("package").preload["entities.laser"] = function(...)-- <pack entities.laser> --
 laser = class("laser")
 
 function laser:init(x, y, r)
@@ -22482,7 +22482,7 @@ function laser:updaterange()
 	self:update()
 end
 end;
-do require("package").preload["entities.animatedtiletrigger"] = function(...)-- <pack entities.animatedtiletrigger> --
+require("package").preload["entities.animatedtiletrigger"] = function(...)-- <pack entities.animatedtiletrigger> --
 animatedtiletrigger = class("animatedtiletrigger")
 
 function animatedtiletrigger:init(x, y, r)
@@ -22553,7 +22553,7 @@ function animatedtiletrigger:input(t, input)
 	end
 end
 end;
-do require("package").preload["entities.castlefirefire"] = function(...)-- <pack entities.castlefirefire> --
+require("package").preload["entities.castlefirefire"] = function(...)-- <pack entities.castlefirefire> --
 castlefirefire = class("castlefirefire")
 
 function castlefirefire:init()
@@ -22586,7 +22586,7 @@ function castlefirefire:init()
 	self.quadcenterY = 4
 end
 end;
-do require("package").preload["entities.noportal"] = function(...)-- <pack entities.noportal> --
+require("package").preload["entities.noportal"] = function(...)-- <pack entities.noportal> --
 noportal = class("noportal")
 
 function noportal:init(x, y, r)
@@ -22712,7 +22712,7 @@ function noportal:addoutput(a, t)
 	table.insert(self.outtable, {a, t})
 end
 end;
-do require("package").preload["entities.redcoin"] = function(...)-- <pack entities.redcoin> --
+require("package").preload["entities.redcoin"] = function(...)-- <pack entities.redcoin> --
 redcoin = class("redcoin")
 
 function redcoin:init(x, y, r)
@@ -22796,7 +22796,7 @@ function redcoin:draw()
 	end
 end
 end;
-do require("package").preload["entities.squarewave"] = function(...)-- <pack entities.squarewave> --
+require("package").preload["entities.squarewave"] = function(...)-- <pack entities.squarewave> --
 squarewave = class("squarewave")
 
 function squarewave:init(x, y, r)
@@ -22879,7 +22879,7 @@ function squarewave:out(t)
 	end
 end
 end;
-do require("package").preload["entities.lightbridge"] = function(...)-- <pack entities.lightbridge> --
+require("package").preload["entities.lightbridge"] = function(...)-- <pack entities.lightbridge> --
 lightbridge = class("lightbridge")
 
 function lightbridge:init(x, y, r)
@@ -23086,7 +23086,7 @@ function lightbridge:addChild(t)
 	table.insert(self.childtable, t)
 end
 end;
-do require("package").preload["entities.gamemode"] = function(...)-- <pack entities.gamemode> --
+require("package").preload["entities.gamemode"] = function(...)-- <pack entities.gamemode> --
 gamemode = class('gamemode')
 
 function gamemode:init(worlds)
@@ -23123,7 +23123,7 @@ function gamemode:update(dt)
 	end
 end
 end;
-do require("package").preload["entities.weapon"] = function(...)-- <pack entities.weapon> --
+require("package").preload["entities.weapon"] = function(...)-- <pack entities.weapon> --
 weapon = class('weapon')
 weapon.static.isWeapon = true
 function weapon:init(parent)
@@ -23172,7 +23172,7 @@ function weapon:secondaryFire()
 	end
 end
 end;
-do require("package").preload["entities.pedestal"] = function(...)-- <pack entities.pedestal> --
+require("package").preload["entities.pedestal"] = function(...)-- <pack entities.pedestal> --
 pedestal = class("pedestal")
 
 function pedestal:init(x, y, r)
@@ -23249,7 +23249,7 @@ function pedestal:draw()
 	end
 end
 end;
-do require("package").preload["entities.notgate"] = function(...)-- <pack entities.notgate> --
+require("package").preload["entities.notgate"] = function(...)-- <pack entities.notgate> --
 notgate = class("notgate")
 
 function notgate:init(x, y, r)
@@ -23336,7 +23336,7 @@ function notgate:input(t, input)
 	end
 end
 end;
-do require("package").preload["entities.cubedispenser"] = function(...)-- <pack entities.cubedispenser> --
+require("package").preload["entities.cubedispenser"] = function(...)-- <pack entities.cubedispenser> --
 cubedispenser = class("cubedispenser")
 
 function cubedispenser:init(x, y, r)
@@ -23459,7 +23459,7 @@ function cubedispenser:removebox()
 	end
 end
 end;
-do require("package").preload["entities.button"] = function(...)-- <pack entities.button> --
+require("package").preload["entities.button"] = function(...)-- <pack entities.button> --
 button = class("button")
 
 function button:init(x, y, r)
@@ -23599,7 +23599,7 @@ function button:addoutput(a, t)
 	table.insert(self.outtable, {a, t})
 end
 end;
-do require("package").preload["entities.pushbutton"] = function(...)-- <pack entities.pushbutton> --
+require("package").preload["entities.pushbutton"] = function(...)-- <pack entities.pushbutton> --
 pushbutton = class("pushbutton")
 
 function pushbutton:init(x, y, r)
@@ -23680,7 +23680,7 @@ function pushbutton:used()
 	end
 end
 end;
-do require("package").preload["entities.portalwall"] = function(...)-- <pack entities.portalwall> --
+require("package").preload["entities.portalwall"] = function(...)-- <pack entities.portalwall> --
 portalwall = class("portalwall")
 
 function portalwall:init(x, y, width, height)
@@ -23704,7 +23704,7 @@ function portalwall:draw()--debug
 	end
 end
 end;
-do require("package").preload["entities.platform"] = function(...)-- <pack entities.platform> --
+require("package").preload["entities.platform"] = function(...)-- <pack entities.platform> --
 platform = class("platform")
 
 function platform:init(x, y, r, diroverride)
@@ -23890,7 +23890,7 @@ function platform:passivecollide(a, b)
 	return false
 end
 end;
-do require("package").preload["entities.walltimer"] = function(...)-- <pack entities.walltimer> --
+require("package").preload["entities.walltimer"] = function(...)-- <pack entities.walltimer> --
 walltimer = class("walltimer")
 
 function walltimer:init(x, y, r)
@@ -23995,7 +23995,7 @@ function walltimer:input(t, input)
 	end
 end
 end;
-do require("package").preload["entities.panel"] = function(...)-- <pack entities.panel> --
+require("package").preload["entities.panel"] = function(...)-- <pack entities.panel> --
 panel = class("panel")
 
 function panel:init(x, y, t)
@@ -24090,7 +24090,7 @@ function panel:updatestuff()
 	end
 end
 end;
-do require("package").preload["entities.groundlight"] = function(...)-- <pack entities.groundlight> --
+require("package").preload["entities.groundlight"] = function(...)-- <pack entities.groundlight> --
 groundlight = class("groundlight")
 
 function groundlight:init(x, y, r)
@@ -24179,7 +24179,7 @@ function groundlight:input(t, input)
 	end
 end
 end;
-do require("package").preload["entities.damage"] = function(...)-- <pack entities.damage> --
+require("package").preload["entities.damage"] = function(...)-- <pack entities.damage> --
 damage = class("damage")
 --[[
 	this class is a singleton that is used as a rule evaluator against objects
@@ -24193,7 +24193,7 @@ function damage:init()
 end
 
 end;
-do require("package").preload["entities.leaf"] = function(...)-- <pack entities.leaf> --
+require("package").preload["entities.leaf"] = function(...)-- <pack entities.leaf> --
 leaf = class("leaf")
 
 function leaf:init(x, y)
@@ -24220,7 +24220,7 @@ function leaf:draw()
 	love.graphics.draw(leafimg, leafquad[spriteset][self.frame], math.floor((self.x-xscroll)*16*scale), math.floor((self.y-yscroll-.5)*16*scale), 0, scale, scale, 2, 2)
 end
 end;
-do require("package").preload["entities.generators"] = function(...)-- <pack entities.generators> --
+require("package").preload["entities.generators"] = function(...)-- <pack entities.generators> --
 generators = class("generators")
 
 function generators:init(x, y, r)
@@ -24280,7 +24280,7 @@ function generators:input(t, input)
 	end
 end
 end;
-do require("package").preload["entities.generatorflames"] = function(...)-- <pack entities.generatorflames> --
+require("package").preload["entities.generatorflames"] = function(...)-- <pack entities.generatorflames> --
 generatorflames = class("generatorflames")
 
 function generatorflames:init(x, y, r)
@@ -24358,7 +24358,7 @@ function generatorflames:draw()
 	
 end
 end;
-do require("package").preload["entities.bowser"] = function(...)-- <pack entities.bowser> --
+require("package").preload["entities.bowser"] = function(...)-- <pack entities.bowser> --
 bowser = class("bowser")
 
 function bowser:init(x, y)
@@ -24592,7 +24592,7 @@ function bowser:emancipate(a)
 	self:shotted()
 end
 end;
-do require("package").preload["entities.userect"] = function(...)-- <pack entities.userect> --
+require("package").preload["entities.userect"] = function(...)-- <pack entities.userect> --
 userect = class('userect')
 
 function userect:init(x, y, width, height, parent)
@@ -24658,7 +24658,7 @@ function legacy_adduserect(x, y, width, height, callback)
 	return t
 end
 end;
-do require("package").preload["entities.seesawplatform"] = function(...)-- <pack entities.seesawplatform> --
+require("package").preload["entities.seesawplatform"] = function(...)-- <pack entities.seesawplatform> --
 seesawplatform = class("seesawplatform")
 
 function seesawplatform:init(x, y, size, callback, side)
@@ -24760,7 +24760,7 @@ function seesawplatform:floorcollide(a, b)
 	return false
 end
 end;
-do require("package").preload["entities.geldispenser"] = function(...)-- <pack entities.geldispenser> --
+require("package").preload["entities.geldispenser"] = function(...)-- <pack entities.geldispenser> --
 geldispenser = class("geldispenser")
 
 function geldispenser:init(x, y, r)
@@ -24880,7 +24880,7 @@ function geldispenser:input(t, input)
 	end
 end
 end;
-do require("package").preload["entities.portalparticle"] = function(...)-- <pack entities.portalparticle> --
+require("package").preload["entities.portalparticle"] = function(...)-- <pack entities.portalparticle> --
 portalparticle = class("portalparticle")
 
 function portalparticle:init(x, y, color, direction)
@@ -24930,7 +24930,7 @@ function portalparticle:draw()
 	love.graphics.draw(portalparticleimg, math.floor((self.x-xscroll)*16*scale), math.floor((self.y-yscroll-.5)*16*scale), 0, scale, scale, .5, .5)
 end
 end;
-do require("package").preload["entities.bulletbill"] = function(...)-- <pack entities.bulletbill> --
+require("package").preload["entities.bulletbill"] = function(...)-- <pack entities.bulletbill> --
 bulletbill = class("bulletbill")
 
 function bulletbill:init(x, y)
@@ -25143,7 +25143,7 @@ function bulletbill:portaled()
 	self.killstuff = true
 end--]]
 end;
-do require("package").preload["entities.checkpoint"] = function(...)-- <pack entities.checkpoint> --
+require("package").preload["entities.checkpoint"] = function(...)-- <pack entities.checkpoint> --
 checkpoint = class("checkpoint")
 
 function checkpoint:init(x, y, r)
@@ -25271,7 +25271,7 @@ function checkpoint:trigger()
 	checkpointsub = mariosublevel
 end
 end;
-do require("package").preload["entities.wallindicator"] = function(...)-- <pack entities.wallindicator> --
+require("package").preload["entities.wallindicator"] = function(...)-- <pack entities.wallindicator> --
 wallindicator = class("wallindicator")
 
 function wallindicator:init(x, y, r)
@@ -25336,7 +25336,7 @@ function wallindicator:input(t, input)
 	end
 end
 end;
-do require("package").preload["entities.lightbridgebody"] = function(...)-- <pack entities.lightbridgebody> --
+require("package").preload["entities.lightbridgebody"] = function(...)-- <pack entities.lightbridgebody> --
 lightbridgebody = class("lightbridgebody")
 
 function lightbridgebody:init(parent, x, y, dir, i)
@@ -25468,7 +25468,7 @@ function lightbridgebody:draw()
 	end
 end
 end;
-do require("package").preload["entities.axe"] = function(...)-- <pack entities.axe> --
+require("package").preload["entities.axe"] = function(...)-- <pack entities.axe> --
 axe = class("axe")
 
 function axe:init(x, y, r)
@@ -25607,7 +25607,7 @@ function axe:addoutput(a, t)
 	table.insert(self.outtable, {a, t})
 end
 end;
-do require("package").preload["entities.firework"] = function(...)-- <pack entities.firework> --
+require("package").preload["entities.firework"] = function(...)-- <pack entities.firework> --
 firework = class("firework")
 
 function firework:init(x, yoffset, ply)
@@ -25650,7 +25650,7 @@ function firework:draw()
 	end
 end
 end;
-do require("package").preload["entities.old_fireball"] = function(...)-- <pack entities.old_fireball> --
+require("package").preload["entities.old_fireball"] = function(...)-- <pack entities.old_fireball> --
 fireball = class("fireball")
 
 function fireball:init(x, y, dir, v)
@@ -25809,7 +25809,7 @@ function fireball:emancipate()
 	end
 end
 end;
-do require("package").preload["entities.emancipationgrill"] = function(...)-- <pack entities.emancipationgrill> --
+require("package").preload["entities.emancipationgrill"] = function(...)-- <pack entities.emancipationgrill> --
 emancipationgrill = class("emancipationgrill")
 
 function emancipationgrill:init(x, y, r)
@@ -26041,7 +26041,7 @@ function emancipationgrill:input(t, input)
 	end
 end
 end;
-do require("package").preload["entities.spring"] = function(...)-- <pack entities.spring> --
+require("package").preload["entities.spring"] = function(...)-- <pack entities.spring> --
 spring = class("spring")
 
 function spring:init(x, y, r)
@@ -26107,7 +26107,7 @@ function spring:hit()
 	playsound("spring", self.x, self.y)
 end
 end;
-do require("package").preload["entities.seesaw"] = function(...)-- <pack entities.seesaw> --
+require("package").preload["entities.seesaw"] = function(...)-- <pack entities.seesaw> --
 seesaw = class("seesaw")
 
 --settings for the types
@@ -26279,7 +26279,7 @@ function seesaw:callbackright(i)
 	self.rcount = i
 end
 end;
-do require("package").preload["entities.generatorwind"] = function(...)-- <pack entities.generatorwind> --
+require("package").preload["entities.generatorwind"] = function(...)-- <pack entities.generatorwind> --
 generatorwind = class("generatorwind")
 
 function generatorwind:init(x, y, r)
@@ -26380,7 +26380,7 @@ function generatorwind:draw()
 	
 end
 end;
-do require("package").preload["entities.funnel"] = function(...)-- <pack entities.funnel> --
+require("package").preload["entities.funnel"] = function(...)-- <pack entities.funnel> --
 funnel = class("funnel")
 
 function funnel:init(x, y, r)
@@ -26877,7 +26877,7 @@ function funnel:input(t, input)
 	end
 end
 end;
-do require("package").preload["entities.emancipateanimation"] = function(...)-- <pack entities.emancipateanimation> --
+require("package").preload["entities.emancipateanimation"] = function(...)-- <pack entities.emancipateanimation> --
 emancipateanimation = class("emancipateanimation")
 
 function emancipateanimation:init(x, y, width, height, img, quad, speedx, speedy, rotation, offsetX, offsetY, quadcenterX, quadcenterY)
@@ -26950,7 +26950,7 @@ function emancipateanimation:draw()
 	end
 end
 end;
-do require("package").preload["entities.delayer"] = function(...)-- <pack entities.delayer> --
+require("package").preload["entities.delayer"] = function(...)-- <pack entities.delayer> --
 delayer = class("delayer")
 
 function delayer:init(x, y, r)
@@ -27040,7 +27040,7 @@ function delayer:input(t, input)
 	table.insert(self.timers, {t=t, timeleft=self.delay})
 end
 end;
-do require("package").preload["entities.animationtarget"] = function(...)-- <pack entities.animationtarget> --
+require("package").preload["entities.animationtarget"] = function(...)-- <pack entities.animationtarget> --
 animationtarget = class("animationtarget")
 
 function animationtarget:init(x, y, r)
@@ -27093,7 +27093,7 @@ function animationtarget:out(t)
 	end
 end
 end;
-do require("package").preload["entities.sfxentity"] = function(...)-- <pack entities.sfxentity> --
+require("package").preload["entities.sfxentity"] = function(...)-- <pack entities.sfxentity> --
 sfxentity = class("sfxentity")
 
 function sfxentity:init(x, y, r)
@@ -27168,7 +27168,7 @@ function sfxentity:addoutput(a, t)
 	table.insert(self.outtable, {a, t})
 end
 end;
-do require("package").preload["entities.ceilblocker"] = function(...)-- <pack entities.ceilblocker> --
+require("package").preload["entities.ceilblocker"] = function(...)-- <pack entities.ceilblocker> --
 ceilblocker = class("ceilblocker")
 
 function ceilblocker:init(x)
@@ -27180,7 +27180,7 @@ function ceilblocker:init(x)
 	self.active = true
 end
 end;
-do require("package").preload["entities.musicentity"] = function(...)-- <pack entities.musicentity> --
+require("package").preload["entities.musicentity"] = function(...)-- <pack entities.musicentity> --
 musicentity = class("musicentity")
 
 function musicentity:init(x, y, r)
@@ -27250,7 +27250,7 @@ function musicentity:input(t, input)
 	end
 end
 end;
-do require("package").preload["entities.actionblock"] = function(...)-- <pack entities.actionblock> --
+require("package").preload["entities.actionblock"] = function(...)-- <pack entities.actionblock> --
 actionblock = class("actionblock")
 
 function actionblock:init(x, y)
@@ -27320,7 +27320,7 @@ function actionblock:out(t)
 	end
 end
 end;
-do require("package").preload["entities.orgate"] = function(...)-- <pack entities.orgate> --
+require("package").preload["entities.orgate"] = function(...)-- <pack entities.orgate> --
 orgate = class("orgate")
 
 function orgate:init(x, y, r)
@@ -27412,7 +27412,7 @@ function orgate:input(t, input)
 	end
 end
 end;
-do require("package").preload["entities.animationtrigger"] = function(...)-- <pack entities.animationtrigger> --
+require("package").preload["entities.animationtrigger"] = function(...)-- <pack entities.animationtrigger> --
 animationtrigger = class("animationtrigger")
 
 function animationtrigger:init(x, y, r)
@@ -27463,7 +27463,7 @@ function animationtrigger:input(t, input)
 	end
 end
 end;
-do require("package").preload["entities.textentity"] = function(...)-- <pack entities.textentity> --
+require("package").preload["entities.textentity"] = function(...)-- <pack entities.textentity> --
 textentity = class("textentity")
 
 function textentity:init(x, y, r)
@@ -27566,7 +27566,7 @@ function textentity:draw()
 	end
 end
 end;
-do require("package").preload["entities.rsflipflop"] = function(...)-- <pack entities.rsflipflop> --
+require("package").preload["entities.rsflipflop"] = function(...)-- <pack entities.rsflipflop> --
 rsflipflop = class("rsflipflop")
 
 function rsflipflop:init(x, y, r)
@@ -27639,7 +27639,7 @@ function rsflipflop:input(t, input)
 	end
 end
 end;
-do require("package").preload["entities.enemy"] = function(...)-- <pack entities.enemy> --
+require("package").preload["entities.enemy"] = function(...)-- <pack entities.enemy> --
 enemy = class("enemy")
 
 function enemy:init(x, y, t, a)
@@ -29531,7 +29531,7 @@ function enemy:getspawnedenemies()
 	return count
 end
 end;
-do require("package").preload["entities.portalprojectileparticle"] = function(...)-- <pack entities.portalprojectileparticle> --
+require("package").preload["entities.portalprojectileparticle"] = function(...)-- <pack entities.portalprojectileparticle> --
 portalprojectileparticle = class("portalprojectileparticle")
 
 function portalprojectileparticle:init(x, y, color, r, g, b)
@@ -29571,7 +29571,7 @@ function portalprojectileparticle:draw()
 	love.graphics.draw(portalprojectileparticleimg, math.floor((self.x-xscroll)*16*scale), math.floor((self.y-yscroll-.5)*16*scale), 0, scale, scale, 2, 2)
 end
 end;
-do require("package").preload["entities.smokepuff"] = function(...)-- <pack entities.smokepuff> --
+require("package").preload["entities.smokepuff"] = function(...)-- <pack entities.smokepuff> --
 smokepuff = class("smokepuff")
 
 function smokepuff:init(x, y)
@@ -29611,7 +29611,7 @@ function smokepuff:draw()
 	end
 end
 end;
-do require("package").preload["entities.pswitch"] = function(...)-- <pack entities.pswitch> --
+require("package").preload["entities.pswitch"] = function(...)-- <pack entities.pswitch> --
 pswitch = class("pswitch")
 
 function pswitch:init(x, y, r)
@@ -29779,7 +29779,7 @@ function pswitch:dead()
 	music:stop("switchmusic.ogg")
 end
 end;
-do require("package").preload["animatedtimer"] = function(...)-- <pack animatedtimer> --
+require("package").preload["animatedtimer"] = function(...)-- <pack animatedtimer> --
 animatedtimer = class("animatedtimer")
 animatedtimerlist = {}
 
@@ -29865,7 +29865,7 @@ function animatedtimer:geti()
 	return 1
 end
 end;
-do require("package").preload["enemies"] = function(...)-- <pack enemies> --
+require("package").preload["enemies"] = function(...)-- <pack enemies> --
 function enemies_load()
 	defaultvalues = {quadcount=1, quadno=1}
 
@@ -30052,7 +30052,7 @@ function usebase(t)
 	return r
 end
 end;
-do require("package").preload["hatconfigs"] = function(...)-- <pack hatconfigs> --
+require("package").preload["hatconfigs"] = function(...)-- <pack hatconfigs> --
 local i
 hat = {}
 
@@ -30282,7 +30282,7 @@ table.insert(hat, {x = 5, y = -3, height = 14, graphic = love.graphics.newImage(
 
 table.insert(hat, {x = 2, y = -5, height = 14, graphic = love.graphics.newImage("standardhats/bighead.png")})
 end;
-do require("package").preload["animationguiline"] = function(...)-- <pack animationguiline> --
+require("package").preload["animationguiline"] = function(...)-- <pack animationguiline> --
 animationguiline = class("animationguiline")
 
 animationlist = {}
@@ -31330,7 +31330,7 @@ function animationguiline:haspriority()
 	return false
 end
 end;
-do require("package").preload["entitylistitem"] = function(...)-- <pack entitylistitem> --
+require("package").preload["entitylistitem"] = function(...)-- <pack entitylistitem> --
 entitylistitem = class("entitylistitem")
 
 function entitylistitem:init(t, i)
@@ -31356,7 +31356,7 @@ function entitylistitem:calibrate(startx, starty, offy)
 	self.offy = offy
 end
 end;
-do require("package").preload["_client"] = function(...)-- <pack _client> --
+require("package").preload["_client"] = function(...)-- <pack _client> --
 function client_load()
 	CLIENT = true
 	print("===CLIENT===")
@@ -31512,7 +31512,7 @@ function client_quit()
 	
 end
 end;
-do require("package").preload["tools.notool"] = function(...)-- <pack tools.notool> --
+require("package").preload["tools.notool"] = function(...)-- <pack tools.notool> --
 local classname=debug.getinfo(1,'S').source:split("/")[2]:sub(0,-5)
 _G[classname] = class(classname, editortool)
 local thisclass = _G[classname]
@@ -31522,7 +31522,7 @@ function thisclass:init()
 	
 end
 end;
-do require("package").preload["tools.entitydraw"] = function(...)-- <pack tools.entitydraw> --
+require("package").preload["tools.entitydraw"] = function(...)-- <pack tools.entitydraw> --
 local classname=debug.getinfo(1,'S').source:split("/")[2]:sub(0,-5)
 _G[classname] = class(classname, editortool)
 local thisclass = _G[classname]
@@ -31551,7 +31551,7 @@ function thisclass:draw()
 	editortool.draw(self)
 end
 end;
-do require("package").preload["tools.paintdraw"] = function(...)-- <pack tools.paintdraw> --
+require("package").preload["tools.paintdraw"] = function(...)-- <pack tools.paintdraw> --
 local classname=debug.getinfo(1,'S').source:split("/")[2]:sub(0,-5)
 _G[classname] = class(classname, editortool)
 local thisclass = _G[classname]
@@ -31616,7 +31616,7 @@ function thisclass:draw()
 	end
 end
 end;
-do require("package").preload["tools.dropper"] = function(...)-- <pack tools.dropper> --
+require("package").preload["tools.dropper"] = function(...)-- <pack tools.dropper> --
 local classname=debug.getinfo(1,'S').source:split("/")[2]:sub(0,-5)
 _G[classname] = class(classname, editortool)
 local thisclass = _G[classname]
@@ -31653,7 +31653,7 @@ function thisclass:draw()
 	editortool.draw(self)
 end
 end;
-do require("package").preload["tools.region"] = function(...)-- <pack tools.region> --
+require("package").preload["tools.region"] = function(...)-- <pack tools.region> --
 local classname=debug.getinfo(1,'S').source:split("/")[2]:sub(0,-5)
 _G[classname] = class(classname, editortool)
 local thisclass = _G[classname]
@@ -31787,7 +31787,7 @@ function thisclass:draw()
 	end
 end
 end;
-do require("package").preload["tools.linker"] = function(...)-- <pack tools.linker> --
+require("package").preload["tools.linker"] = function(...)-- <pack tools.linker> --
 local classname=debug.getinfo(1,'S').source:split("/")[2]:sub(0,-5)
 _G[classname] = class(classname, editortool)
 local thisclass = _G[classname]
@@ -31963,7 +31963,7 @@ function thisclass:draw()
 	end
 end
 end;
-do require("package").preload["tools.selection"] = function(...)-- <pack tools.selection> --
+require("package").preload["tools.selection"] = function(...)-- <pack tools.selection> --
 local classname=debug.getinfo(1,'S').source:split("/")[2]:sub(0,-5)
 _G[classname] = class(classname, editortool)
 local thisclass = _G[classname]
@@ -32037,7 +32037,7 @@ function thisclass:clear()
 	end
 end
 end;
-do require("package").preload["tools.playermover"] = function(...)-- <pack tools.playermover> --
+require("package").preload["tools.playermover"] = function(...)-- <pack tools.playermover> --
 local classname=debug.getinfo(1,'S').source:split("/")[2]:sub(0,-5)
 _G[classname] = class(classname, editortool)
 local thisclass = _G[classname]
@@ -32074,7 +32074,7 @@ function thisclass:draw()
 	editortool.draw(self)
 end
 end;
-do require("package").preload["tools.lightdraw"] = function(...)-- <pack tools.lightdraw> --
+require("package").preload["tools.lightdraw"] = function(...)-- <pack tools.lightdraw> --
 local classname=debug.getinfo(1,'S').source:split("/")[2]:sub(0,-5)
 _G[classname] = class(classname, editortool)
 local thisclass = _G[classname]
@@ -32103,7 +32103,7 @@ function thisclass:draw()
 	editortool.draw(self)
 end
 end;
-do require("package").preload["editortool"] = function(...)-- <pack editortool> --
+require("package").preload["editortool"] = function(...)-- <pack editortool> --
 editortool = class('editortool')
 
 function editortool:init(name)
@@ -32179,7 +32179,7 @@ function editortool:draw()
 	end
 end
 end;
-do require("package").preload["oldfuncs"] = function(...)-- <pack oldfuncs> --
+require("package").preload["oldfuncs"] = function(...)-- <pack oldfuncs> --
 function server_syncping()
 	for i, v in pairs(server_peerlist) do
 		for j, k in pairs(server_peerlist) do
@@ -33493,7 +33493,7 @@ end
 
 
 end;
-do require("package").preload["baseentity"] = function(...)-- <pack baseentity> --
+require("package").preload["baseentity"] = function(...)-- <pack baseentity> --
 baseentity = class('baseentity')
 baseentity.mixedins = {}
 -- these variables are only available to "baseentity", not its children
@@ -33753,7 +33753,7 @@ function baseentity:draw()
 	end
 end]]
 end;
-do require("package").preload["entitytooltip"] = function(...)-- <pack entitytooltip> --
+require("package").preload["entitytooltip"] = function(...)-- <pack entitytooltip> --
 entitytooltip = class("entitytooltip")
 
 local theight = 64
@@ -33787,7 +33787,7 @@ function entitytooltip:draw(a)
 	end
 end
 end;
-do require("package").preload["conf"] = function(...)-- <pack conf> --
+require("package").preload["conf"] = function(...)-- <pack conf> --
 function love.conf(t)
 	t.title = "Marin0SE"
 	t.author = "Maurice"
@@ -33798,7 +33798,7 @@ function love.conf(t)
 	t.console = true
 end
 end;
-do require("package").preload["weapons.portalgun"] = function(...)-- <pack weapons.portalgun> --
+require("package").preload["weapons.portalgun"] = function(...)-- <pack weapons.portalgun> --
 portalgun = class('portalgun', weapon)
 function portalgun:init(parent)
 	weapon.init(self,parent)
@@ -33896,7 +33896,7 @@ function portalgun:secondaryFire()
 	end
 end
 end;
-do require("package").preload["weapons.gelcannon"] = function(...)-- <pack weapons.gelcannon> --
+require("package").preload["weapons.gelcannon"] = function(...)-- <pack weapons.gelcannon> --
 gelcannon = class('gelcannon', weapon)
 --gelcannon.static.name = 'gelcannon'
 function gelcannon:init(parent)
@@ -33935,7 +33935,7 @@ function gelcannon:secondaryFire()
 	end
 end
 end;
-do require("package").preload["netplay"] = function(...)-- <pack netplay> --
+require("package").preload["netplay"] = function(...)-- <pack netplay> --
 local alternatesynctimer = -5
 networkynccedconfig = false
 networkupdatelimit = .05
@@ -34257,7 +34257,7 @@ function client_callback_synccontrol(pl)
 	end
 end
 end;
-do require("package").preload["animation"] = function(...)-- <pack animation> --
+require("package").preload["animation"] = function(...)-- <pack animation> --
 animation = class("animation")
 
 --[[ TRIGGERS:
@@ -34755,7 +34755,7 @@ function animation:draw()
 	
 end
 end;
-do require("package").preload["gui"] = function(...)-- <pack gui> --
+require("package").preload["gui"] = function(...)-- <pack gui> --
 guielement = class("guielement")
 
 function guielement:init(...)
@@ -35594,7 +35594,7 @@ function guielement:inhighlight(x, y)
 	return false
 end
 end;
-do require("package").preload["characterloader"] = function(...)-- <pack characterloader> --
+require("package").preload["characterloader"] = function(...)-- <pack characterloader> --
 function loadcharacter(charname)
 	local folder = "characters/" .. charname .. "/"
 	if not love.filesystem.exists(folder .. "config.txt") then
@@ -35771,7 +35771,7 @@ for i, v in pairs(love.filesystem.getDirectoryItems("characters/")) do
 	end
 end
 end;
-do require("package").preload["portal"] = function(...)-- <pack portal> --
+require("package").preload["portal"] = function(...)-- <pack portal> --
 portal = class("portal")
 
 function portal:init(number, c1, c2, parent)	
@@ -35964,7 +35964,7 @@ function portal:draw()
 	end
 end
 end;
-do require("package").preload["soundman"] = function(...)-- <pack soundman> --
+require("package").preload["soundman"] = function(...)-- <pack soundman> --
 soundman = class("soundman")
 
 --[[
@@ -36024,7 +36024,7 @@ function playsound2(sound)
 end
 
 end;
-do require("package").preload["globals"] = function(...)-- <pack globals> --
+require("package").preload["globals"] = function(...)-- <pack globals> --
 --[[
 	The purpose of this is to document / list variables in the global scope.
 ]]
@@ -36235,7 +36235,7 @@ controlTable = {
 	useMouse = true,
 }
 end;
-do require("package").preload["netplay2"] = function(...)-- <pack netplay2> --
+require("package").preload["netplay2"] = function(...)-- <pack netplay2> --
 net={}
 net.listenTable={}
 net.udpSocket=nil
@@ -36295,7 +36295,7 @@ serve.peers = {}
 	}
 ]]
 end;
-do require("package").preload["variables"] = function(...)-- <pack variables> --
+require("package").preload["variables"] = function(...)-- <pack variables> --
 --DELIMITERS old: ,-;*=   new: ¤×¸·¨
 BLOCKDELIMITER = "¤"
 LAYERDELIMITER = "×"
@@ -36956,7 +36956,7 @@ portaldotstimer = 0
 
 pswitchtime = 20
 end;
-do require("package").preload["game"] = function(...)-- <pack game> --
+require("package").preload["game"] = function(...)-- <pack game> --
 networkupdatetimer = 0
 enemyupdatetimer = 0
 angletimer = 0
@@ -42027,7 +42027,7 @@ function checkportalremove(x, y)
 	end
 end
 end;
-do require("package").preload["shaders.init"] = function(...)-- <pack shaders.init> --
+require("package").preload["shaders.init"] = function(...)-- <pack shaders.init> --
 local supported = love.graphics.isSupported and love.graphics.isSupported("canvas") and love.graphics.isSupported("shader")
 local supports_npo2 = love.graphics.isSupported and love.graphics.isSupported("npot") or false -- on the safe side
 if not supported then 
@@ -42293,7 +42293,7 @@ function shaders:postdraw()
 	love.graphics.setShader()
 end
 end;
-do require("package").preload["coinblockanimation"] = function(...)-- <pack coinblockanimation> --
+require("package").preload["coinblockanimation"] = function(...)-- <pack coinblockanimation> --
 coinblockanimation = class("coinblockanimation")
 
 function coinblockanimation:init(x, y)
@@ -42320,7 +42320,7 @@ function coinblockanimation:update(dt)
 	return false
 end
 end;
-do require("package").preload["utils"] = function(...)-- <pack utils> --
+require("package").preload["utils"] = function(...)-- <pack utils> --
 --[[ strange language sorcery takes place here ]]
 function table.pack(...)
 	return { n = select("#", ...), ... }
@@ -42408,7 +42408,7 @@ function table.fdelete(tbl, filterfunc, ex)
 	end
 end
 end;
-do require("package").preload["hook"] = function(...)-- <pack hook> --
+require("package").preload["hook"] = function(...)-- <pack hook> --
 --[[
 	We're going to use this to experiment with the concept of hookable events.
 	If we play our cards right we won't die!
@@ -42472,7 +42472,7 @@ function hook.Remove( eventName, identifier )
 	return true
 end
 end;
-do require("package").preload["gui.maptree"] = function(...)-- <pack gui.maptree> --
+require("package").preload["gui.maptree"] = function(...)-- <pack gui.maptree> --
 maptree = class('maptree')
 
 function maptree:init(maps)
@@ -42768,7 +42768,7 @@ function maptree:mousereleased(x, y, button)
 	end]]
 end
 end;
-do require("package").preload["gui.killfeed"] = function(...)-- <pack gui.killfeed> --
+require("package").preload["gui.killfeed"] = function(...)-- <pack gui.killfeed> --
 killfeed = {}
 
 killfeed.themes = {
@@ -42991,7 +42991,7 @@ function killfeed.gety(y, life, height, duration)
 	end
 end
 end;
-do require("package").preload["gui.nodetree"] = function(...)-- <pack gui.nodetree> --
+require("package").preload["gui.nodetree"] = function(...)-- <pack gui.nodetree> --
 nodetree = class('nodetree')
 
 function nodetree:init(anims, anims2)
@@ -43378,7 +43378,7 @@ function nodetree:mousereleased(x, y, button)
 	end
 end
 end;
-do require("package").preload["gui.tiletree"] = function(...)-- <pack gui.tiletree> --
+require("package").preload["gui.tiletree"] = function(...)-- <pack gui.tiletree> --
 tiletree = class('tiletree')
 
 function tiletree:init(maps)
@@ -43931,7 +43931,7 @@ function tiletree:mousereleased(x, y, button)
 	end]]
 end
 end;
-do require("package").preload["gui.onlinemenu"] = function(...)-- <pack gui.onlinemenu> --
+require("package").preload["gui.onlinemenu"] = function(...)-- <pack gui.onlinemenu> --
 function onlinemenu_load()
 	objects = nil
 	
@@ -44312,7 +44312,7 @@ function magicdns_error(result)
 	return false
 end
 end;
-do require("package").preload["player"] = function(...)-- <pack player> --
+require("package").preload["player"] = function(...)-- <pack player> --
 player = class("player")
 
 function player:init(x, y, i, animation, size, t)
