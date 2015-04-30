@@ -96,7 +96,6 @@ function music:update()
 		source:setPitch(self.pitch)
 	end
 end
-
 end end)()end;
 do require("package").preload["miniblock"] = (function() local package;return function(...)-- <pack miniblock> --
 miniblock = class("miniblock")
@@ -1077,7 +1076,6 @@ function request(url, body)
   end
   return res, code, headers, status
 end
-
 end end)()end;
 do require("package").preload["libs.ssl"] = (function() local package;return function(...)-- <pack libs.ssl> --
 ------------------------------------------------------------------------------
@@ -1247,7 +1245,6 @@ end
 -- Set method for SSL connections.
 --
 core.setmethod("info", info)
-
 
 end end)()end;
 do require("package").preload["libs.lurker"] = (function() local package;return function(...)-- <pack libs.lurker> --
@@ -1496,7 +1493,6 @@ end
 
 
 return lurker.init()
-
 end end)()end;
 do require("package").preload["libs.filter"] = (function() local package;return function(...)-- <pack libs.filter> --
 --[[
@@ -2597,7 +2593,6 @@ middleclass.Object = Object
 setmetatable(middleclass, { __call = function(_, ...) return middleclass.class(...) end })
 
 return middleclass
-
 end end)()end;
 do require("package").preload["libs.cupid"] = (function() local package;return function(...)-- <pack libs.cupid> --
 -----------------------------------------------------
@@ -3542,7 +3537,6 @@ MQAuADAAMABXAGgAaQB0AGUAUgBhAGIAYgBpAHQAVwBoAGkAdABlACAAUgBhAGIAYgBpAHQAmQAg
 AFQAcgBhAGQAZQBtAGEAcgBrACAAbwBmACAATQBhAHQAdABoAGUAdwAgAFcAZQBsAGMAaAAAAAAA
 AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 ]], "whiterabit.ttf", "base64") end
-
 end end)()end;
 do require("package").preload["libs.sha1"] = (function() local package;return function(...)-- <pack libs.sha1> --
 --
@@ -4574,7 +4568,6 @@ print(199) assert("950ad3222f4917f868d09feab237a909fb6d50b7" == hmac_sha1(string
 
 ---]]-----------------------------------------------------------------------------------------
 --END
-
 end end)()end;
 do require("package").preload["libs.neubind"] = (function() local package;return function(...)-- <pack libs.neubind> --
 --[[
@@ -4900,7 +4893,6 @@ function tcpServer:accept()
 end
 
 return {tcpClient, tcpServer}
-
 end end)()end;
 do require("package").preload["libs.lube.udp"] = (function() local package;return function(...)-- <pack libs.lube.udp> --
 local socket = require "socket"
@@ -4985,7 +4977,6 @@ end
 
 
 return {udpClient, udpServer}
-
 end end)()end;
 do require("package").preload["libs.lube.core"] = (function() local package;return function(...)-- <pack libs.lube.core> --
 --- CLIENT ---
@@ -5216,7 +5207,6 @@ function server:update(dt)
 end
 
 return {client, server}
-
 end end)()end;
 do require("package").preload["libs.lube.init"] = (function() local package;return function(...)-- <pack libs.lube.init> --
 -- Get our base modulename, to require the submodules
@@ -5275,7 +5265,6 @@ if pcall(require, "enet") then
 end
 
 return lube
-
 end end)()end;
 do require("package").preload["libs.lube.enet"] = (function() local package;return function(...)-- <pack libs.lube.enet> --
 local enet = require "enet"
@@ -5416,7 +5405,6 @@ function enetServer:update(dt)
 end
 
 return {enetClient, enetServer}
-
 end end)()end;
 do require("package").preload["libs.TEsound"] = (function() local package;return function(...)-- <pack libs.TEsound> --
 --- TEsound v1.3, a simplified sound system for Love 2D
@@ -6060,7 +6048,6 @@ end
 
 
 return lume
-
 end end)()end;
 do require("package").preload["libs.monocle"] = (function() local package;return function(...)-- <pack libs.monocle> --
 Monocle = {}
@@ -6288,7 +6275,6 @@ end]]
 
 
 return Monocle
-
 
 end end)()end;
 do require("package").preload["server"] = (function() local package;return function(...)-- <pack server> --
@@ -6936,7 +6922,6 @@ function anim:init(actor, sequence_name)
 end
 
 
-
 end end)()end;
 do require("package").preload["fire"] = (function() local package;return function(...)-- <pack fire> --
 fire = class("fire")
@@ -7181,7 +7166,6 @@ function upload_imagedata(oname, imagedata)
 	})
 	return JSON:decode(table.concat(t))
 end
-
 end end)()end;
 do require("package").preload["animationsystem"] = (function() local package;return function(...)-- <pack animationsystem> --
 function animationsystem_load()
@@ -7437,7 +7421,6 @@ function levelscreen_draw()
 		drawui(true)
 	end
 end
-
 end end)()end;
 do require("package").preload["bighatconfigs"] = (function() local package;return function(...)-- <pack bighatconfigs> --
 bighat = {}
@@ -14022,7 +14005,6 @@ function IsMappable:included(klass)
 	--entitiescount
 end
 
-
 end end)()end;
 do require("package").preload["basedmixins.Base"] = (function() local package;return function(...)-- <pack basedmixins.Base> --
 -- this is a convenience collection while I clean house of baseentity
@@ -16599,7 +16581,6 @@ return {
     }
   }
 }
-
 end end)()end;
 do require("package").preload["menu"] = (function() local package;return function(...)-- <pack menu> --
 function menu_load()
@@ -19343,7 +19324,6 @@ function toggleclassicmode()
 	end
 end
 
-
 end end)()end;
 do require("package").preload["entity"] = (function() local package;return function(...)-- <pack entity> --
 entity = class("entity")
@@ -19986,7 +19966,6 @@ function entity:sett(i)
 end
 
 entityquad_overloads = {} --this is for overloading whatever is done to entityquads because we can't use it normally
-
 end end)()end;
 do require("package").preload["entities.faithplate"] = (function() local package;return function(...)-- <pack entities.faithplate> --
 faithplate = class("faithplate")
@@ -24212,7 +24191,6 @@ damage = class("damage")
 function damage:init()
 	
 end
-
 
 end end)()end;
 do require("package").preload["entities.leaf"] = (function() local package;return function(...)-- <pack entities.leaf> --
@@ -33514,7 +33492,6 @@ end
 
 
 
-
 end end)()end;
 do require("package").preload["baseentity"] = (function() local package;return function(...)-- <pack baseentity> --
 baseentity = class('baseentity')
@@ -36046,7 +36023,6 @@ function playsound2(sound)
 	end
 end
 
-
 end end)()end;
 do require("package").preload["globals"] = (function() local package;return function(...)-- <pack globals> --
 --[[
@@ -36318,7 +36294,6 @@ serve.peers = {}
 		
 	}
 ]]
-
 end end)()end;
 do require("package").preload["variables"] = (function() local package;return function(...)-- <pack variables> --
 --DELIMITERS old: ,-;*=   new: ¤×¸·¨
@@ -42051,7 +42026,6 @@ function checkportalremove(x, y)
 		end
 	end
 end
-
 end end)()end;
 do require("package").preload["shaders.init"] = (function() local package;return function(...)-- <pack shaders.init> --
 local supported = love.graphics.isSupported and love.graphics.isSupported("canvas") and love.graphics.isSupported("shader")
@@ -42318,7 +42292,6 @@ function shaders:postdraw()
 	love.graphics.setBlendMode(blendmode)
 	love.graphics.setShader()
 end
-
 end end)()end;
 do require("package").preload["coinblockanimation"] = (function() local package;return function(...)-- <pack coinblockanimation> --
 coinblockanimation = class("coinblockanimation")
